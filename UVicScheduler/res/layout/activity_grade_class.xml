@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GradeClassActivity" >
+
+  	<TextView android:id="@+id/courseGradeCourseTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="15dp" />
+  	
+ 	<TextView
+        android:id="@+id/courseGradeErrorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/courseGradeCourseTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="@string/courseGradeError" />
+    
+    <TextView android:id="@+id/courseGradeTitleTextView"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_below="@+id/courseGradeErrorTextView"
+		android:text="@string/course_grade_title"
+		android:paddingLeft="3dp"
+		android:width="180dip"
+		android:height="35dip"
+		android:layout_marginTop="15dp" />
+	
+	<TextView android:id="@+id/courseGradeMarkTextView"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_alignTop="@+id/courseGradeTitleTextView"
+		android:layout_toRightOf="@+id/courseGradeTitleTextView"
+		android:gravity="center"
+		android:text="@string/course_grade_mark"
+		android:width="50dip"
+		android:height="35dip" />
+
+	<TextView android:id="@+id/courseGradePercentageTextView"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_alignTop="@+id/courseGradeTitleTextView"
+		android:layout_toRightOf="@+id/courseGradeMarkTextView"
+		android:layout_toLeftOf="@+id/courseGradeWeightTextView"
+		android:text="@string/course_grade_percentage"
+		android:gravity="center"
+		android:width="50dip"
+		android:height="35dip" />
+		
+	<TextView android:id="@+id/courseGradeWeightTextView"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_alignTop="@+id/courseGradeTitleTextView"
+		android:layout_alignParentRight="true"
+		android:text="@string/course_grade_weight"
+		android:gravity="center"
+		android:height="35dip"
+		android:layout_marginRight="5dp" />
+	
+	<!-- List Divider -->
+	<View android:id="@+id/courseGradelistDivider"
+	    android:layout_width="fill_parent"
+	    android:layout_below="@+id/courseGradeTitleTextView"
+		android:layout_height="5dip"
+		android:background="?android:attr/listDivider" />
+	
+    <ListView
+        android:id="@+id/courseGradeList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/courseGradelistDivider"
+        android:clickable="true"
+        tools:listitem="@android:layout/simple_list_item_2" >
+    </ListView>
+    
+</RelativeLayout>

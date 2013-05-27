@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgendaDayActivity" >
+
+    <Spinner
+        android:id="@+id/spinnerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true" />
+    
+	<Button
+	    android:id="@+id/button_previous_day"
+	    style="?android:attr/buttonStyleSmall"
+	    android:layout_width="80dp"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_below="@+id/spinnerView"
+	    android:text="@string/button_previous_day"
+	    android:onClick="prevDay" />
+    
+    <TextView
+	    android:id="@+id/dayViewTextView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/button_previous_day"
+	    android:layout_toLeftOf="@+id/button_next_day"
+	    android:layout_alignTop="@+id/button_next_day"
+	    android:layout_alignBottom="@+id/button_next_day"
+	    android:layout_centerHorizontal="true"
+	    android:gravity="center"
+	    android:textStyle="bold"
+	    android:text="@string/day"  />
+    
+    <Button
+        android:id="@+id/button_next_day"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button_previous_day"
+        android:text="@string/button_next_day"
+        android:onClick="nextDay" />
+    
+    <TextView
+	    android:id="@+id/instructionDayTextView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/dayViewTextView"
+	    android:layout_centerHorizontal="true"
+	    android:text="@string/agendahelp" />
+
+    <ListView
+        android:id="@+id/listViewDayAgenda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/instructionDayTextView" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listViewDayAgenda"
+        android:layout_alignParentLeft="true"
+        android:text="@string/complete"
+        android:textSize="10sp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_marginLeft="2dp" />
+    
+</RelativeLayout>

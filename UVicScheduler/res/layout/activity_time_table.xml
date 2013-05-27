@@ -1,0 +1,410 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimeTableActivity" >
+
+	<ScrollView
+	    android:id="@+id/scrollView1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/DateEnder"
+	    android:layout_centerHorizontal="true" >
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	        
+	        <TextView
+			    android:id="@+id/instructionTextView"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@+id/weekGlanceTextView"
+			    android:layout_centerHorizontal="true"
+			    android:text="@string/timetablehelp" />
+	        
+		    <Button
+			    android:id="@+id/button_previous_week"
+			    style="?android:attr/buttonStyleSmall"
+			    android:layout_width="80dp"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_alignParentTop="true"
+			    android:text="@string/button_previous_week"
+			    android:onClick="prevWeek" />
+		    
+		    <TextView
+			    android:id="@+id/weekGlanceTextView"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_toRightOf="@+id/button_previous_week"
+			    android:layout_toLeftOf="@+id/button_next_week"
+			    android:layout_alignTop="@id/button_next_week"
+			    android:layout_alignBottom="@+id/button_next_week"
+			    android:layout_centerHorizontal="true"
+			    android:gravity="center"
+				android:textStyle="bold" />
+		    
+		    <Button
+		        android:id="@+id/button_next_week"
+		        style="?android:attr/buttonStyleSmall"
+		        android:layout_width="80dp"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:layout_alignTop="@+id/button_previous_week"
+		        android:text="@string/button_next_week" 
+		        android:onClick="nextWeek" />
+		    
+		   	<!-- List Divider -->
+			<View android:id="@+id/listDivider"
+			    android:layout_width="match_parent"
+			    android:layout_below="@+id/instructionTextView"
+				android:layout_height="2dip"
+				android:background="?android:attr/listDivider"
+				android:layout_marginLeft="45dp" />
+		
+			<TextView
+			    android:id="@+id/textView1"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/DateDivider"
+			    android:paddingLeft="2dp"
+			    android:background="#DDDDDD"
+			    android:text="@string/time_8" />
+		
+			<TextView
+			    android:id="@+id/textView2"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView1"
+			    android:paddingLeft="2dp"
+			    android:text="@string/time_9" />
+			
+			<TextView
+			    android:id="@+id/textView11"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView2"
+			    android:paddingLeft="2dp"
+			    android:background="#E0E0E0"
+			    android:text="@string/time_10" />
+		
+			<TextView
+			    android:id="@+id/textView4"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView11"
+			    android:paddingLeft="2dp"
+			    android:text="@string/time_11" />
+		
+			<TextView
+			    android:id="@+id/textView5"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView4"
+			    android:paddingLeft="2dp"
+			    android:background="#E0E0E0"
+			    android:text="@string/time_12" />
+		
+			<TextView
+			    android:id="@+id/textView6"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView5"
+			    android:paddingLeft="2dp"
+			    android:text="@string/time_1" />
+		
+			<TextView
+			    android:id="@+id/textView7"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView6"
+			    android:paddingLeft="2dp"
+			    android:background="#E0E0E0"
+			    android:text="@string/time_2" />
+		
+			<TextView
+			    android:id="@+id/textView8"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView7"
+			    android:paddingLeft="2dp"
+			    android:text="@string/time_3" />
+		
+			<TextView
+			    android:id="@+id/textView9"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView8"
+			    android:paddingLeft="2dp"
+			    android:background="#E0E0E0"
+			    android:text="@string/time_4" />
+			
+			<TextView
+			    android:id="@+id/textView10"
+			    android:layout_width="match_parent"
+			    android:layout_height="50dp"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView9"
+			    android:paddingLeft="2dp"
+			    android:text="@string/time_5" />
+		
+			<View
+			    android:id="@+id/DateDivider"
+			    android:layout_width="match_parent"
+			    android:layout_height="5dip"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/calendarmf"
+			    android:background="?android:attr/listDivider" />
+			
+			<View
+			    android:id="@+id/DateEnder"
+			    android:layout_width="match_parent"
+			    android:layout_height="5dip"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/textView10"
+			    android:background="?android:attr/listDivider" />
+
+			<View android:id="@+id/view1"
+			    android:layout_width="3dip"
+			    android:layout_height="match_parent"
+			    android:layout_toRightOf="@+id/textView3"
+			    android:layout_below="@+id/listDivider"
+			    android:layout_above="@+id/DateEnder"
+			    android:layout_marginLeft="5dp"
+			    android:background="?android:attr/listDivider" />
+		
+			<View
+			    android:id="@+id/view2"
+			    android:layout_width="3dip"
+			    android:layout_height="match_parent"
+			    android:layout_below="@+id/DateDivider"
+			    android:layout_above="@+id/DateEnder"
+			    android:layout_toRightOf="@+id/view1"
+			   	android:layout_marginLeft="50dp"
+			    android:background="?android:attr/listDivider" />
+		
+			<View
+			    android:id="@+id/view3"
+			    android:layout_width="3dip"
+			    android:layout_height="match_parent"
+			    android:layout_below="@+id/DateDivider"
+			    android:layout_above="@+id/DateEnder"
+			    android:layout_toRightOf="@+id/view2"
+			    android:layout_marginLeft="50dp"
+			    android:background="?android:attr/listDivider" />
+		
+			<View
+			    android:id="@+id/view4"
+			    android:layout_width="3dip"
+			    android:layout_height="match_parent"
+			    android:layout_below="@+id/DateDivider"
+			    android:layout_above="@+id/DateEnder"
+			    android:layout_toRightOf="@+id/view3"
+			    android:layout_marginLeft="50dp"
+			    android:background="?android:attr/listDivider" />
+		
+			<View
+			    android:id="@+id/view5"
+			    android:layout_width="3dip"
+			    android:layout_height="match_parent"
+			    android:layout_below="@+id/DateDivider"
+			    android:layout_above="@+id/DateEnder"
+			    android:layout_toRightOf="@+id/view4"
+			    android:layout_marginLeft="50dp"
+			    android:background="?android:attr/listDivider" />
+		
+			<TextView
+			    android:id="@+id/textView3"
+			    android:layout_width="40dp"
+			    android:layout_height="wrap_content"
+			    android:layout_alignParentLeft="true"
+			    android:layout_below="@+id/listDivider"
+			    android:paddingLeft="2dp" />
+			
+			<Button
+			    android:id="@+id/button_class305b"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view3"
+			    android:layout_alignRight="@+id/view4"
+			    android:layout_alignTop="@+id/textView5"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_305"
+			    android:onClick="viewClass" />
+						
+			<Button
+			    android:id="@+id/button_class305c"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view5"
+			    android:layout_alignTop="@+id/textView5"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_305"
+			    android:onClick="viewClass" />
+			
+			<Button
+			    android:id="@+id/button_class330a"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view2"
+			    android:layout_alignRight="@+id/view3"
+			    android:layout_alignTop="@+id/textView8"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_330"
+			    android:onClick="viewClass" />
+			
+			<Button
+			    android:id="@+id/button_class330b"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view3"
+			    android:layout_alignRight="@+id/view4"
+			    android:layout_alignTop="@+id/textView8"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_330"
+			    android:onClick="viewClass" />
+						
+			<Button
+			    android:id="@+id/button_class330c"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view5"
+			    android:layout_alignTop="@+id/textView8"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_330"
+			    android:onClick="viewClass" />
+
+			<Button
+			    android:id="@+id/button_class360a"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view2"
+			    android:layout_alignRight="@+id/view3"
+			    android:layout_alignTop="@+id/textView2"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_360"
+			    android:onClick="viewClass" />
+			
+			<Button
+			    android:id="@+id/button_class360b"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view3"
+			    android:layout_alignRight="@+id/view4"
+			    android:layout_alignTop="@+id/textView2"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_360"
+			    android:onClick="viewClass" />
+						
+			<Button
+			    android:id="@+id/button_class360c"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view5"
+			    android:layout_alignTop="@+id/textView2"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_360"
+			    android:onClick="viewClass" />
+			
+			<Button
+			    android:id="@+id/button_class370a"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view2"
+			    android:layout_alignRight="@+id/view3"
+			    android:layout_alignTop="@+id/textView11"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_370"
+			    android:onClick="viewClass" />
+			
+			<Button
+			    android:id="@+id/button_class370b"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view3"
+			    android:layout_alignRight="@+id/view4"
+			    android:layout_alignTop="@+id/textView11"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_370"
+			    android:onClick="viewClass" />
+						
+			<Button
+			    android:id="@+id/button_class370c"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view5"
+			    android:layout_alignTop="@+id/textView11"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_370"
+			    android:onClick="viewClass" />
+			
+			<Button
+			    android:id="@+id/button_class310a"
+			    android:layout_width="wrap_content"
+			    android:layout_height="77dp"
+			    android:layout_alignLeft="@+id/view1"
+			    android:layout_alignRight="@+id/view2"
+			    android:layout_alignTop="@+id/textView5"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_310"
+			    android:onClick="viewClass" />
+			
+			<Button
+			    android:id="@+id/button_class310b"
+			    android:layout_width="wrap_content"
+			    android:layout_height="77dp"
+			    android:layout_alignLeft="@+id/view4"
+			    android:layout_alignRight="@+id/view5"
+			    android:layout_alignTop="@+id/textView5"
+			    android:layout_marginTop="20dp"
+			    android:textSize="7sp"
+			    android:text="@string/class_310"
+			    android:onClick="viewClass" />
+
+			<Button
+			    android:id="@+id/button_class305a"
+			    android:layout_width="wrap_content"
+			    android:layout_height="52dp"
+			    android:layout_alignLeft="@+id/view2"
+			    android:layout_alignRight="@+id/view3"
+			    android:layout_alignTop="@+id/textView5"
+			    android:layout_marginTop="20dp"
+			    android:text="@string/class_305"
+			    android:textSize="7sp"
+			    android:onClick="viewClass" />
+			
+
+			<ImageView
+			    android:id="@+id/calendarmf"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_alignLeft="@+id/view1"
+			    android:layout_below="@+id/listDivider"
+			    android:src="@drawable/calendarweekdaysmf_withdates" />
+		        
+	    </RelativeLayout>
+	</ScrollView>
+
+</RelativeLayout>

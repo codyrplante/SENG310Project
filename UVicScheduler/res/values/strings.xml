@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">UVic Scheduler</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="password">Password:</string>
+    <string name="netlink">NetLink ID:</string>
+    <string name="userhelp"><u>Need help with your account?</u></string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="login_help">Display Help Screen Info</string>
+    <string name="login_help_button">OK</string>
+    <string name="button_agenda">Agenda</string>
+    <string name="button_timetable">Timetable</string>
+    <string name="button_grades">Grades</string>
+    <string name="button_settings">Settings</string>
+    <string name="button_logout">Sign Out</string>
+    <string name="title_activity_home_menu">Home</string>
+    <string name="title_activity_time_table">Timetable</string>
+    <string name="title_activity_grades">Grades</string>
+    <string name="title_activity_timetable_class">Class Details</string>
+    <string name="title_activity_grade_class">Grade Details</string>
+    <string name="title_activity_agenda">Agenda</string>
+	<string name="title_activity_settings">Settings</string>
+
+    <!-- AGENDA ACTIVITY STRINGS -->
+    <string name="complete">Done?</string>
+    <string name="agendahelp">Tap a task to view details</string>
+    <string name="agendamonthhelp">Tap a date to view that day</string>
+    <string name="button_weektodo1">SENG 310 Heur Eval</string>
+    <string name="button_weektodo2">CSC 370 Project</string>
+    <string name="button_weektodo3">CSC 360 Assn 2</string>
+    <string name="button_weektodo4">CSC 330 Assn 3</string>
+    <string name="button_weektodo5">CSC 360 Assn 3</string>
+    <string name="button_weektodo6">CSC 305 Assn 4</string>
+    <string name="month">March 2013</string>
+    <string name="day">March 15th, 2013</string>
+    <string name="button_previous_day">Previous Day</string>
+    <string name="button_next_day">Next Day</string>
+    <string name="button_previous_month">Previous Month</string>
+    <string name="button_next_month">Next Month</string>
+	<string name="task_class">CSC 330</string>
+    <string name="task_name">Assignment 3</string>
+    <string name="task_date">Due: Friday, March 15th, 2013 at 11:55 pm</string>
+    <string name="task_source">Source: Connex</string>
+   	<string name="task_grade">Grade Scale: Ungraded</string>
+   	<string name="task_instructions1">Instructions:</string>
+   	<string name="task_instructions2">This is the second part of the Assignment 2 Multi-Flow Scheduler.</string>
+
+
+    <!-- TIMETABLE ACTIVITY STRINGS -->
+    <string name="week">Week Of Mar 4, 2013</string>
+    <string name="button_previous_week">Previous Week</string>
+    <string name="button_next_week">Next Week</string>
+    <string name="class_305">CSC 305 COR B108</string>
+    <string name="class_330">CSC 330 ESC 124</string>
+    <string name="class_360">CSC 360  ELL 062</string>
+    <string name="class_370">CSC 370 HSD A240</string>
+    <string name="class_310">SENG 310 ESC 108</string>
+    <string name="time_8">8am</string>
+    <string name="time_9">9am</string>
+    <string name="time_10">10am</string>
+    <string name="time_11">11am</string>
+    <string name="time_12">12pm</string>
+    <string name="time_1">1pm</string>
+    <string name="time_2">2pm</string>
+    <string name="time_3">3pm</string>
+    <string name="time_4">4pm</string>
+    <string name="time_5">5pm</string>
+
+    <!-- TIMETABLE CLASS ACTIVITY STRINGS -->
+    <string name="timetablehelp">Tap a class to view details</string>
+    <string name="ttclass_name">SENG 310: Human Comp Interact\'n</string>
+    <string name="ttclass_instructor">Instructor: Celinda Berg </string>
+    <string name="ttclass_time">Time: 1:00 pm - 2:20 pm</string>
+    <string name="ttclass_location">Where: Engr Comp Science Bldg 108</string>
+    <string name="ttclass_date">Date Range: Jan 03, 2013 - Apr 05, 2013</string>
+    <string name="ttclass_type">Schedule Type: Lecture</string>
+    <string name="ttclass_when">Type: Every Week</string>
+
+    <!-- GRADE ACTIVITY STRINGS -->
+    <string name="gradehelp">Tap a class to view further grade details</string>
+    <string name="select_term">Select a term:</string>
+    <string name="course_header">Course</string>
+    <string name="course_title">Course Title</string>
+    <string name="course_final_grade">Final Grade</string>
+    <string name="semester_gpa">Semester GPA: 9.0</string>
+    <string name="cumulative_gpa">Cumulative GPA: 9.0</string>
+    <string name="courseGradeError">Sorry, this professor has not posted marks</string>
+    <string name="course_grade_title">Title</string>
+    <string name="course_grade_mark">Mark</string>
+    <string name="course_grade_percentage">%</string>
+    <string name="course_grade_weight">Weight</string>
+
+    <string-array name="terms_array">
+        <item>Second Term: Jan - Apr 2013</item>
+        <item>First Term: Sep - Dec 2012</item>
+        <item>Second Term: Jan - Apr 2012</item>
+        <item>First Term: Sep - Dec 2011</item>
+        <item>Second Term: Jan - Apr 2011</item>
+        <item>First Term: Jan - Apri 2010</item>
+    </string-array>
+</resources>

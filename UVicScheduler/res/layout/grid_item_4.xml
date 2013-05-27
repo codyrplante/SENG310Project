@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	
+	<TextView android:id="@+id/courseGradeTitleGridTextView"
+		android:layout_height="match_parent"
+		android:layout_width="wrap_content"
+		android:paddingLeft="3dp"
+		android:width="180dip"
+		android:height="35dip" />
+
+	<TextView android:id="@+id/courseGradeMarkGridTextView"
+		android:layout_height="match_parent"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@+id/courseGradeTitleGridTextView"
+		android:gravity="center"
+		android:width="50dip"
+		android:height="35dip" />
+	
+	<TextView android:id="@+id/courseGradePercentageGridTextView"
+		android:layout_height="match_parent"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@+id/courseGradeMarkGridTextView"
+		android:layout_toLeftOf="@+id/courseGradeWeightGridTextView"
+		android:gravity="center"
+		android:width="50dip"
+		android:height="35dip" />
+	
+	<TextView android:id="@+id/courseGradeWeightGridTextView"
+		android:layout_height="match_parent"
+		android:layout_width="wrap_content"
+		android:layout_alignParentRight="true"
+		android:gravity="center"
+		android:width="50dip"
+		android:height="35dip" />
+</RelativeLayout>

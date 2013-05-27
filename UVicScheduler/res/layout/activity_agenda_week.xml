@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgendaWeekActivity" >
+
+    <Spinner
+        android:id="@+id/spinnerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button_previous_week"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/spinnerView"
+        android:text="@string/button_previous_week"
+        android:onClick="prevWeek" />
+
+    <TextView
+        android:id="@+id/weekTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_next_week"
+        android:layout_alignTop="@+id/button_next_week"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@+id/button_next_week"
+        android:layout_toRightOf="@+id/button_previous_week"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_next_week"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/button_previous_week"
+        android:text="@string/button_next_week"
+        android:onClick="nextWeek" />
+    
+	<TextView
+	    android:id="@+id/instructionDayTextView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@+id/weekTextView"
+	    android:layout_centerHorizontal="true"
+	    android:text="@string/agendahelp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/instructionDayTextView"
+        android:layout_gravity="center" >
+
+        <ImageView
+            android:id="@+id/calendarheaderweek"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/calendarweekdays_withdates" >
+        </ImageView>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/DateDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/linearLayout1"
+        android:background="?android:attr/listDivider" />
+    
+  	<View
+        android:id="@+id/bar1"
+        android:layout_width="3dip"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/DateDivider"
+        android:layout_marginLeft="35dp"
+        android:background="?android:attr/listDivider" />
+  	
+    <View
+        android:id="@+id/bar2"
+        android:layout_width="3dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bar1"
+        android:layout_alignTop="@+id/DateDivider"
+        android:layout_marginLeft="45dp"
+        android:background="?android:attr/listDivider" />
+  	
+    
+    <View
+        android:id="@+id/bar3"
+        android:layout_width="3dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bar2"
+        android:layout_alignTop="@+id/DateDivider"
+        android:layout_marginLeft="40dp"
+        android:background="?android:attr/listDivider" />
+    
+    <View
+        android:id="@+id/bar4"
+        android:layout_width="3dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bar3"
+        android:layout_alignTop="@+id/DateDivider"
+        android:layout_marginLeft="45dp"
+        android:background="?android:attr/listDivider" />
+    
+    <View
+        android:id="@+id/bar5"
+        android:layout_width="3dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bar4"
+        android:layout_alignTop="@+id/DateDivider"
+        android:layout_marginLeft="42dp"
+        android:background="?android:attr/listDivider" />
+    
+    <View
+        android:id="@+id/bar6"
+        android:layout_width="3dip"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/bar5"
+        android:layout_alignTop="@+id/DateDivider"
+        android:layout_marginLeft="48dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/weekToDo1"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bar1"
+        android:layout_alignRight="@+id/bar2"
+        android:layout_below="@+id/DateDivider"
+        android:layout_marginTop="45dp"
+        android:textSize="7sp"
+        android:text="@string/button_weektodo1"
+        android:onClick="viewTask" />
+    
+ 	<Button
+        android:id="@+id/weekToDo2"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bar1"
+        android:layout_alignRight="@+id/bar2"
+        android:layout_below="@+id/weekToDo1"
+        android:layout_marginTop="5dp"
+        android:textSize="7sp"
+        android:text="@string/button_weektodo2"
+        android:onClick="viewTask" />
+ 	
+	<Button
+        android:id="@+id/weekToDo3"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bar3"
+        android:layout_alignRight="@+id/bar4"
+        android:layout_below="@+id/DateDivider"
+        android:layout_marginTop="60dp"
+        android:textSize="7sp"
+        android:text="@string/button_weektodo3"
+        android:onClick="viewTask" />
+	
+	<Button
+        android:id="@+id/weekToDo5"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bar3"
+        android:layout_alignRight="@+id/bar4"
+        android:layout_below="@+id/weekToDo3"
+        android:layout_marginTop="60dp"
+        android:textSize="7sp"
+        android:text="@string/button_weektodo5"
+        android:onClick="viewTask" />
+	
+	<Button
+        android:id="@+id/weekToDo4"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bar5"
+        android:layout_alignRight="@+id/bar6"
+        android:layout_below="@+id/DateDivider"
+        android:layout_marginTop="105dp"
+        android:textSize="7sp"
+        android:text="@string/button_weektodo4"
+        android:onClick="viewTask" />
+	
+	<Button
+        android:id="@+id/weekToDo6"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bar5"
+        android:layout_alignRight="@+id/bar6"
+        android:layout_below="@+id/weekToDo4"
+        android:layout_marginTop="40dp"
+        android:textSize="7sp"
+        android:text="@string/button_weektodo6"
+        android:onClick="viewTask" />
+
+</RelativeLayout>
